@@ -1,15 +1,15 @@
 addi $t1 $zero 8
-addi $t2 $zero 9
+addi $t2 $zero 7
 
-sltu $t3 $t1 $t2
+sltu $t0 $t1 $t2
 #$t3 is 1 if t1 < t2, 0 otherwise
 
-mult $t1 $t3
+mult $t1 $t0
 mflo $t1
 
-xori $t3, $t3, 1
+xori $t0, $t0, 1
 
-mult $t2 $t3
+mult $t2 $t0
 mflo $t2
 
 add $t0 $t1 $t2
