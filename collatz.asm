@@ -1,4 +1,4 @@
-addi $s0 $0 0 # a is the value we operate on
+addi $s0 $0 14 # a is the value we operate on
 addi $s1 $0 1 # used to check equal to one and check odd
 addi $s3 $0 3 # used to multiply by 3
 addi $s4 $0 500

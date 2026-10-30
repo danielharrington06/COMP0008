@@ -1,0 +1,22 @@
+addi $t1 $zero 8
+addi $t2 $zero 9
+
+sltu $t3 $t1 $t2
+#$t3 is 1 if t1 < t2, 0 otherwise
+
+mult $t1 $t3
+mflo $t1
+
+xori $t3, $t3, 1
+
+mult $t2 $t3
+mflo $t2
+
+add $t0 $t1 $t2
+
+move $a0, $t0
+li $v0, 36
+syscall
+
+li $v0, 10
+syscall
